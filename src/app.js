@@ -10,13 +10,9 @@ const recipesRouter = require('./recipes/recipe-router')
 const app = express()
 
 
-const morganOption = (NODE_ENV === 'production') 
+const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
   : 'common';
-
-  if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-  }
 
 app.use(morgan(morganOption))
 app.use(helmet())
