@@ -33,7 +33,7 @@ RecipeServices.getAllRecipes(knexInstance)
           }
       ).then(() => RecipeServices.getById(knexInstance, newRecipe.id))
   })
-  .then(article => {
+  .then(recipe => {
       console.log(recipe)
       return RecipeServices.deleteRecipe(knexInstance, recipe.id)
   })
